@@ -9,13 +9,15 @@
 /* Begin PBXBuildFile section */
 		BB42FEF62B7B4B960091DF8E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB42FEF52B7B4B960091DF8E /* AppDelegate.swift */; };
 		BB42FEF82B7B4B960091DF8E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB42FEF72B7B4B960091DF8E /* SceneDelegate.swift */; };
-		BB42FEFA2B7B4B960091DF8E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB42FEF92B7B4B960091DF8E /* ViewController.swift */; };
 		BB42FEFD2B7B4B960091DF8E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB42FEFB2B7B4B960091DF8E /* Main.storyboard */; };
 		BB42FEFF2B7B4B9C0091DF8E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB42FEFE2B7B4B9C0091DF8E /* Assets.xcassets */; };
 		BB42FF022B7B4B9C0091DF8E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB42FF002B7B4B9C0091DF8E /* LaunchScreen.storyboard */; };
 		BB42FF0D2B7B4B9D0091DF8E /* otpValidationScreenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB42FF0C2B7B4B9D0091DF8E /* otpValidationScreenTests.swift */; };
 		BB42FF172B7B4B9D0091DF8E /* otpValidationScreenUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB42FF162B7B4B9D0091DF8E /* otpValidationScreenUITests.swift */; };
 		BB42FF192B7B4B9D0091DF8E /* otpValidationScreenUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB42FF182B7B4B9D0091DF8E /* otpValidationScreenUITestsLaunchTests.swift */; };
+		BB42FF272B7B4C7A0091DF8E /* OtpStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB42FF262B7B4C7A0091DF8E /* OtpStoryboard.storyboard */; };
+		BB42FF292B7B4CBC0091DF8E /* OtpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB42FF282B7B4CBC0091DF8E /* OtpViewController.swift */; };
+		BB42FF2B2B7B4D7C0091DF8E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB42FF2A2B7B4D7C0091DF8E /* MainViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +41,6 @@
 		BB42FEF22B7B4B960091DF8E /* otpValidationScreen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = otpValidationScreen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB42FEF52B7B4B960091DF8E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BB42FEF72B7B4B960091DF8E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		BB42FEF92B7B4B960091DF8E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		BB42FEFC2B7B4B960091DF8E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BB42FEFE2B7B4B9C0091DF8E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BB42FF012B7B4B9C0091DF8E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +50,9 @@
 		BB42FF122B7B4B9D0091DF8E /* otpValidationScreenUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = otpValidationScreenUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB42FF162B7B4B9D0091DF8E /* otpValidationScreenUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = otpValidationScreenUITests.swift; sourceTree = "<group>"; };
 		BB42FF182B7B4B9D0091DF8E /* otpValidationScreenUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = otpValidationScreenUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		BB42FF262B7B4C7A0091DF8E /* OtpStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OtpStoryboard.storyboard; sourceTree = "<group>"; };
+		BB42FF282B7B4CBC0091DF8E /* OtpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtpViewController.swift; sourceTree = "<group>"; };
+		BB42FF2A2B7B4D7C0091DF8E /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,11 +105,12 @@
 			children = (
 				BB42FEF52B7B4B960091DF8E /* AppDelegate.swift */,
 				BB42FEF72B7B4B960091DF8E /* SceneDelegate.swift */,
-				BB42FEF92B7B4B960091DF8E /* ViewController.swift */,
+				BB42FF2A2B7B4D7C0091DF8E /* MainViewController.swift */,
 				BB42FEFB2B7B4B960091DF8E /* Main.storyboard */,
 				BB42FEFE2B7B4B9C0091DF8E /* Assets.xcassets */,
 				BB42FF002B7B4B9C0091DF8E /* LaunchScreen.storyboard */,
 				BB42FF032B7B4B9C0091DF8E /* Info.plist */,
+				BB42FF252B7B4BFF0091DF8E /* OtpValidation */,
 			);
 			path = otpValidationScreen;
 			sourceTree = "<group>";
@@ -125,6 +130,15 @@
 				BB42FF182B7B4B9D0091DF8E /* otpValidationScreenUITestsLaunchTests.swift */,
 			);
 			path = otpValidationScreenUITests;
+			sourceTree = "<group>";
+		};
+		BB42FF252B7B4BFF0091DF8E /* OtpValidation */ = {
+			isa = PBXGroup;
+			children = (
+				BB42FF262B7B4C7A0091DF8E /* OtpStoryboard.storyboard */,
+				BB42FF282B7B4CBC0091DF8E /* OtpViewController.swift */,
+			);
+			path = OtpValidation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,6 +248,7 @@
 				BB42FF022B7B4B9C0091DF8E /* LaunchScreen.storyboard in Resources */,
 				BB42FEFF2B7B4B9C0091DF8E /* Assets.xcassets in Resources */,
 				BB42FEFD2B7B4B960091DF8E /* Main.storyboard in Resources */,
+				BB42FF272B7B4C7A0091DF8E /* OtpStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,9 +273,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BB42FEFA2B7B4B960091DF8E /* ViewController.swift in Sources */,
+				BB42FF292B7B4CBC0091DF8E /* OtpViewController.swift in Sources */,
 				BB42FEF62B7B4B960091DF8E /* AppDelegate.swift in Sources */,
 				BB42FEF82B7B4B960091DF8E /* SceneDelegate.swift in Sources */,
+				BB42FF2B2B7B4D7C0091DF8E /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -435,8 +451,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = otpValidationScreen/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -451,6 +469,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.Cintaj.otpValidationScreen;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -462,8 +481,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = otpValidationScreen/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -478,6 +499,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.Cintaj.otpValidationScreen;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
