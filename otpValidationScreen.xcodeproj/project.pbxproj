@@ -18,6 +18,8 @@
 		BB42FF272B7B4C7A0091DF8E /* OtpStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB42FF262B7B4C7A0091DF8E /* OtpStoryboard.storyboard */; };
 		BB42FF292B7B4CBC0091DF8E /* OtpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB42FF282B7B4CBC0091DF8E /* OtpViewController.swift */; };
 		BB42FF2B2B7B4D7C0091DF8E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB42FF2A2B7B4D7C0091DF8E /* MainViewController.swift */; };
+		BB8094492B7E166900301052 /* CustomTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8094482B7E166900301052 /* CustomTextFieldView.swift */; };
+		BB80944B2B7E169C00301052 /* TextFieldBackSpaceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB80944A2B7E169C00301052 /* TextFieldBackSpaceDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		BB42FF262B7B4C7A0091DF8E /* OtpStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OtpStoryboard.storyboard; sourceTree = "<group>"; };
 		BB42FF282B7B4CBC0091DF8E /* OtpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtpViewController.swift; sourceTree = "<group>"; };
 		BB42FF2A2B7B4D7C0091DF8E /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		BB8094482B7E166900301052 /* CustomTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextFieldView.swift; sourceTree = "<group>"; };
+		BB80944A2B7E169C00301052 /* TextFieldBackSpaceDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldBackSpaceDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +141,8 @@
 			children = (
 				BB42FF262B7B4C7A0091DF8E /* OtpStoryboard.storyboard */,
 				BB42FF282B7B4CBC0091DF8E /* OtpViewController.swift */,
+				BB8094482B7E166900301052 /* CustomTextFieldView.swift */,
+				BB80944A2B7E169C00301052 /* TextFieldBackSpaceDelegate.swift */,
 			);
 			path = OtpValidation;
 			sourceTree = "<group>";
@@ -275,7 +281,9 @@
 			files = (
 				BB42FF292B7B4CBC0091DF8E /* OtpViewController.swift in Sources */,
 				BB42FEF62B7B4B960091DF8E /* AppDelegate.swift in Sources */,
+				BB80944B2B7E169C00301052 /* TextFieldBackSpaceDelegate.swift in Sources */,
 				BB42FEF82B7B4B960091DF8E /* SceneDelegate.swift in Sources */,
+				BB8094492B7E166900301052 /* CustomTextFieldView.swift in Sources */,
 				BB42FF2B2B7B4D7C0091DF8E /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
