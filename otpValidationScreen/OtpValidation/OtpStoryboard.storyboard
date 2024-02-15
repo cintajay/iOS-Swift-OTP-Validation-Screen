@@ -1,30 +1,220 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="aIe-fk-WSh">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Medium.ttf">
+            <string>Roboto-Medium</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Otp View Controller-->
-        <scene sceneID="s0d-6b-0kx">
+        <scene sceneID="2Gt-x8-ksn">
             <objects>
-                <viewController storyboardIdentifier="OtpViewController" id="Y6W-OH-hqX" customClass="OtpViewController" customModule="otpValidationScreen" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                <viewController storyboardIdentifier="OtpViewController" id="aIe-fk-WSh" customClass="OtpViewController" customModule="otpValidationScreen" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KJr-VN-Dml">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oux-87-jjr">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B15-KD-p1S" userLabel="ContentView">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="759"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="xsB-cl-uT5">
+                                                <rect key="frame" x="66.666666666666686" y="156" width="260" height="50"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m0L-Kz-QJH" customClass="OtpTextFieldView" customModule="otpValidationScreen" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                        <subviews>
+                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WUm-xU-9nV" customClass="OtpTextField" customModule="otpValidationScreen" customModuleProvider="target">
+                                                                <rect key="frame" x="5" y="5" width="40" height="40"/>
+                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="22"/>
+                                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                                <connections>
+                                                                    <action selector="emailTextFieldEditChange:" destination="aIe-fk-WSh" eventType="editingChanged" id="mB1-79-u0m"/>
+                                                                </connections>
+                                                            </textField>
+                                                        </subviews>
+                                                        <color key="backgroundColor" red="0.2535848752" green="0.46480250490000002" blue="0.65731992989999999" alpha="0.5875116816" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="50" id="Hne-Kz-2t4"/>
+                                                            <constraint firstItem="WUm-xU-9nV" firstAttribute="leading" secondItem="m0L-Kz-QJH" secondAttribute="leading" constant="5" id="TLs-sR-EOo"/>
+                                                            <constraint firstAttribute="width" constant="50" id="eeI-xH-R72"/>
+                                                            <constraint firstItem="WUm-xU-9nV" firstAttribute="top" secondItem="m0L-Kz-QJH" secondAttribute="top" constant="5" id="rhs-uL-9Lg"/>
+                                                            <constraint firstAttribute="bottom" secondItem="WUm-xU-9nV" secondAttribute="bottom" constant="5" id="tkT-9I-0e4"/>
+                                                            <constraint firstAttribute="trailing" secondItem="WUm-xU-9nV" secondAttribute="trailing" constant="5" id="wVt-dv-HDB"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HvL-Ks-J4M" customClass="OtpTextFieldView" customModule="otpValidationScreen" customModuleProvider="target">
+                                                        <rect key="frame" x="69.999999999999986" y="0.0" width="50" height="50"/>
+                                                        <subviews>
+                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yfK-k3-VsK" customClass="OtpTextField" customModule="otpValidationScreen" customModuleProvider="target">
+                                                                <rect key="frame" x="5" y="5" width="40" height="40"/>
+                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="22"/>
+                                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                                <connections>
+                                                                    <action selector="emailTextFieldEditChange:" destination="aIe-fk-WSh" eventType="editingChanged" id="ncd-wf-HsJ"/>
+                                                                </connections>
+                                                            </textField>
+                                                        </subviews>
+                                                        <color key="backgroundColor" red="0.2535848752" green="0.46480250490000002" blue="0.65731992989999999" alpha="0.5875116816" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <constraints>
+                                                            <constraint firstItem="yfK-k3-VsK" firstAttribute="top" secondItem="HvL-Ks-J4M" secondAttribute="top" constant="5" id="1w6-LV-q7k"/>
+                                                            <constraint firstAttribute="width" constant="50" id="Ep0-sq-q1Y"/>
+                                                            <constraint firstItem="yfK-k3-VsK" firstAttribute="leading" secondItem="HvL-Ks-J4M" secondAttribute="leading" constant="5" id="IP7-Ia-VCU"/>
+                                                            <constraint firstAttribute="trailing" secondItem="yfK-k3-VsK" secondAttribute="trailing" constant="5" id="lZo-Iz-fa1"/>
+                                                            <constraint firstAttribute="bottom" secondItem="yfK-k3-VsK" secondAttribute="bottom" constant="5" id="thS-e1-hd3"/>
+                                                            <constraint firstAttribute="height" constant="50" id="w9r-9P-3Pb"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S4a-it-0oI" customClass="OtpTextFieldView" customModule="otpValidationScreen" customModuleProvider="target">
+                                                        <rect key="frame" x="140" y="0.0" width="50" height="50"/>
+                                                        <subviews>
+                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JwD-lP-DKg" customClass="OtpTextField" customModule="otpValidationScreen" customModuleProvider="target">
+                                                                <rect key="frame" x="5" y="5" width="40" height="40"/>
+                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="22"/>
+                                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                                <connections>
+                                                                    <action selector="emailTextFieldEditChange:" destination="aIe-fk-WSh" eventType="editingChanged" id="NHR-y6-4dB"/>
+                                                                </connections>
+                                                            </textField>
+                                                        </subviews>
+                                                        <color key="backgroundColor" red="0.2535848752" green="0.46480250490000002" blue="0.65731992989999999" alpha="0.5875116816" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="bottom" secondItem="JwD-lP-DKg" secondAttribute="bottom" constant="5" id="378-4I-uD5"/>
+                                                            <constraint firstAttribute="trailing" secondItem="JwD-lP-DKg" secondAttribute="trailing" constant="5" id="Wje-AZ-SIf"/>
+                                                            <constraint firstAttribute="height" constant="50" id="lgN-yD-EEM"/>
+                                                            <constraint firstItem="JwD-lP-DKg" firstAttribute="top" secondItem="S4a-it-0oI" secondAttribute="top" constant="5" id="p0o-hB-xcY"/>
+                                                            <constraint firstItem="JwD-lP-DKg" firstAttribute="leading" secondItem="S4a-it-0oI" secondAttribute="leading" constant="5" id="rxQ-as-QOU"/>
+                                                            <constraint firstAttribute="width" constant="50" id="wMf-QX-Vi2"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wkm-zg-iVS" customClass="OtpTextFieldView" customModule="otpValidationScreen" customModuleProvider="target">
+                                                        <rect key="frame" x="210" y="0.0" width="50" height="50"/>
+                                                        <subviews>
+                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SzI-tb-cN8" customClass="OtpTextField" customModule="otpValidationScreen" customModuleProvider="target">
+                                                                <rect key="frame" x="5" y="5" width="40" height="40"/>
+                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="22"/>
+                                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                                <connections>
+                                                                    <action selector="emailTextFieldEditChange:" destination="aIe-fk-WSh" eventType="editingChanged" id="GHE-rX-48K"/>
+                                                                </connections>
+                                                            </textField>
+                                                        </subviews>
+                                                        <color key="backgroundColor" red="0.2535848752" green="0.46480250490000002" blue="0.65731992989999999" alpha="0.5875116816" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <constraints>
+                                                            <constraint firstItem="SzI-tb-cN8" firstAttribute="top" secondItem="Wkm-zg-iVS" secondAttribute="top" constant="5" id="FMY-ai-TEr"/>
+                                                            <constraint firstAttribute="height" constant="50" id="HDR-gr-zoj"/>
+                                                            <constraint firstAttribute="bottom" secondItem="SzI-tb-cN8" secondAttribute="bottom" constant="5" id="aIN-4y-rFd"/>
+                                                            <constraint firstItem="SzI-tb-cN8" firstAttribute="leading" secondItem="Wkm-zg-iVS" secondAttribute="leading" constant="5" id="bEf-jg-Xu5"/>
+                                                            <constraint firstAttribute="width" constant="50" id="laq-1H-Zcc"/>
+                                                            <constraint firstAttribute="trailing" secondItem="SzI-tb-cN8" secondAttribute="trailing" constant="5" id="tot-8r-bel"/>
+                                                        </constraints>
+                                                    </view>
+                                                </subviews>
+                                            </stackView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pyE-HL-4Cv" userLabel="Req Otp" customClass="BlueRoundedButton" customModule="otpValidationScreen" customModuleProvider="target">
+                                                <rect key="frame" x="166.66666666666666" y="254" width="60" height="48"/>
+                                                <color key="backgroundColor" name="AppBlueColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="60" id="CrV-S3-ydv"/>
+                                                    <constraint firstAttribute="height" constant="48" id="eNS-ny-B73"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="16"/>
+                                                <inset key="imageEdgeInsets" minX="20" minY="20" maxX="20" maxY="20"/>
+                                                <state key="normal" title="Login">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3 resend requests left" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HLb-Y9-ETj">
+                                                <rect key="frame" x="133.66666666666666" y="359" width="125.66666666666666" height="15.333333333333314"/>
+                                                <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="13"/>
+                                                <color key="textColor" name="AppBlueColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jlj-7O-w1J">
+                                                <rect key="frame" x="174" y="342" width="45" height="13"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="13" id="qOT-wT-c9H"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="13"/>
+                                                <inset key="imageEdgeInsets" minX="20" minY="20" maxX="20" maxY="20"/>
+                                                <state key="normal" title="Resend">
+                                                    <color key="titleColor" name="AppBlueColor"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="pyE-HL-4Cv" firstAttribute="centerX" secondItem="B15-KD-p1S" secondAttribute="centerX" id="6em-6O-7Am"/>
+                                            <constraint firstItem="pyE-HL-4Cv" firstAttribute="top" secondItem="xsB-cl-uT5" secondAttribute="bottom" constant="48" id="A3W-YA-PFr"/>
+                                            <constraint firstItem="Jlj-7O-w1J" firstAttribute="top" secondItem="pyE-HL-4Cv" secondAttribute="bottom" constant="40" id="OR9-WU-ChX"/>
+                                            <constraint firstItem="Jlj-7O-w1J" firstAttribute="centerX" secondItem="B15-KD-p1S" secondAttribute="centerX" id="Wf0-z6-Vig"/>
+                                            <constraint firstItem="HLb-Y9-ETj" firstAttribute="centerX" secondItem="B15-KD-p1S" secondAttribute="centerX" id="pxs-Kl-wTO"/>
+                                            <constraint firstItem="HLb-Y9-ETj" firstAttribute="top" secondItem="Jlj-7O-w1J" secondAttribute="bottom" constant="4" id="rWN-j7-TPd"/>
+                                            <constraint firstItem="xsB-cl-uT5" firstAttribute="centerX" secondItem="B15-KD-p1S" secondAttribute="centerX" id="wmC-xA-bBb"/>
+                                            <constraint firstItem="xsB-cl-uT5" firstAttribute="top" secondItem="B15-KD-p1S" secondAttribute="top" constant="156" id="ycM-sn-kI1"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="B15-KD-p1S" firstAttribute="height" secondItem="aib-Yv-xqr" secondAttribute="height" id="ClN-Mi-AF5"/>
+                                    <constraint firstItem="B15-KD-p1S" firstAttribute="leading" secondItem="2CP-eI-Ryw" secondAttribute="leading" id="I4C-eb-bEf"/>
+                                    <constraint firstItem="B15-KD-p1S" firstAttribute="bottom" secondItem="2CP-eI-Ryw" secondAttribute="bottom" id="O3N-Qs-EWz"/>
+                                    <constraint firstItem="B15-KD-p1S" firstAttribute="trailing" secondItem="2CP-eI-Ryw" secondAttribute="trailing" id="PfI-rG-1Ml"/>
+                                    <constraint firstItem="B15-KD-p1S" firstAttribute="width" secondItem="aib-Yv-xqr" secondAttribute="width" id="S1B-by-jHF"/>
+                                    <constraint firstItem="B15-KD-p1S" firstAttribute="top" secondItem="2CP-eI-Ryw" secondAttribute="top" id="uZf-JG-N0p"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="2CP-eI-Ryw"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="aib-Yv-xqr"/>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="oBc-eb-oB2"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="oux-87-jjr" firstAttribute="top" secondItem="oBc-eb-oB2" secondAttribute="top" id="5m1-yy-8cp"/>
+                            <constraint firstItem="oBc-eb-oB2" firstAttribute="bottom" secondItem="oux-87-jjr" secondAttribute="bottom" id="EzA-WT-hk9"/>
+                            <constraint firstItem="oux-87-jjr" firstAttribute="leading" secondItem="oBc-eb-oB2" secondAttribute="leading" id="eKx-DK-9aM"/>
+                            <constraint firstItem="oBc-eb-oB2" firstAttribute="trailing" secondItem="oux-87-jjr" secondAttribute="trailing" id="ria-xv-8xl"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outletCollection property="otpTextFieldCollection" destination="WUm-xU-9nV" collectionClass="NSMutableArray" id="W3k-la-eFf"/>
+                        <outletCollection property="otpTextFieldCollection" destination="yfK-k3-VsK" collectionClass="NSMutableArray" id="Zlh-oO-E7V"/>
+                        <outletCollection property="otpTextFieldCollection" destination="JwD-lP-DKg" collectionClass="NSMutableArray" id="TAf-Vc-vni"/>
+                        <outletCollection property="otpTextFieldCollection" destination="SzI-tb-cN8" collectionClass="NSMutableArray" id="dVW-XH-tZx"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fNh-vL-KL3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="18" y="-2"/>
+            <point key="canvasLocation" x="462" y="1"/>
         </scene>
     </scenes>
     <resources>
+        <namedColor name="AppBlueColor">
+            <color red="0.14117647058823529" green="0.396078431372549" blue="0.56470588235294117" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
