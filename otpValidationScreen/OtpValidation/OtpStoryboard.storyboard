@@ -146,12 +146,6 @@
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                             </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3 resend requests left" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HLb-Y9-ETj">
-                                                <rect key="frame" x="133.66666666666666" y="359" width="125.66666666666666" height="15.333333333333314"/>
-                                                <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="13"/>
-                                                <color key="textColor" name="AppBlueColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jlj-7O-w1J">
                                                 <rect key="frame" x="174" y="342" width="45" height="13"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -163,7 +157,16 @@
                                                 <state key="normal" title="Resend">
                                                     <color key="titleColor" name="AppBlueColor"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="resendPressed:" destination="aIe-fk-WSh" eventType="touchUpInside" id="Byf-ii-Yni"/>
+                                                </connections>
                                             </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3 resend requests left" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HLb-Y9-ETj">
+                                                <rect key="frame" x="133.66666666666666" y="359" width="125.66666666666666" height="15.333333333333314"/>
+                                                <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="13"/>
+                                                <color key="textColor" name="AppBlueColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
@@ -200,6 +203,8 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="resendBtn" destination="Jlj-7O-w1J" id="uPU-jf-Xek"/>
+                        <outlet property="resendReqLbl" destination="HLb-Y9-ETj" id="T4a-DC-6e7"/>
                         <outletCollection property="otpTextFieldCollection" destination="WUm-xU-9nV" collectionClass="NSMutableArray" id="W3k-la-eFf"/>
                         <outletCollection property="otpTextFieldCollection" destination="yfK-k3-VsK" collectionClass="NSMutableArray" id="Zlh-oO-E7V"/>
                         <outletCollection property="otpTextFieldCollection" destination="JwD-lP-DKg" collectionClass="NSMutableArray" id="TAf-Vc-vni"/>

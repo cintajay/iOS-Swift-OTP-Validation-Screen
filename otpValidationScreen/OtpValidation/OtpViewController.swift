@@ -10,6 +10,13 @@ import UIKit
 class OtpViewController: UIViewController, UITextFieldDelegate, TextFieldDelegateExtension {
     
     @IBOutlet var otpTextFieldCollection: [OtpTextField]!
+    
+    @IBOutlet weak var resendBtn: UIButton!
+    @IBOutlet weak var resendReqLbl: UILabel!
+
+    
+    var otpAttempts = 5
+    var secondsRemaining = 15
 
 
     override func viewDidLoad() {
@@ -18,6 +25,8 @@ class OtpViewController: UIViewController, UITextFieldDelegate, TextFieldDelegat
             otpField.delegate = self
         }
         otpTextFieldCollection.first?.becomeFirstResponder()
+        resendBtn.setTitleColor(.gray, for: .disabled)
+        resendReqLbl.text = "\(otpAttempts) resend requests left"
 
     }
     
@@ -47,6 +56,30 @@ class OtpViewController: UIViewController, UITextFieldDelegate, TextFieldDelegat
             if otpTextFieldCollection.indices.contains(index-1) {
                 otpTextFieldCollection[index-1].becomeFirstResponder()
             }
+        }
+    }
+    
+    @IBAction func resendPressed(_ sender: UIButton) {
+        if otpAttempts > 0 {
+            otpAttempts = otpAttempts-1
+            resendReqLbl.text = "\(otpAttempts) resend requests left"
+            self.resendBtn.setTitle("Resend in \(self.secondsRemaining) seconds", for: .disabled)
+            resendBtn.isEnabled = false
+            Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { (Timer) in
+                if self.secondsRemaining > 0 {
+                    self.secondsRemaining -= 1
+                    self.resendBtn.setTitle("Resend in \(self.secondsRemaining) seconds", for: .disabled)
+                } else {
+                    Timer.invalidate()
+                    self.secondsRemaining = 15
+                    self.resendBtn.isEnabled = true
+                }
+            }
+        } else {
+            let message = "The maximum number of unsuccessful sign in attempts has been reached. Please try again later"
+            let alert = UIAlertController(title: "Unable to Sign In", message: message, preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
         }
     }
     
