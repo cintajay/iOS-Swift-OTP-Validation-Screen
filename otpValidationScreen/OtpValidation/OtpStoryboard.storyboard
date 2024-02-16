@@ -133,7 +133,7 @@
                                                     </view>
                                                 </subviews>
                                             </stackView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pyE-HL-4Cv" userLabel="Req Otp" customClass="BlueRoundedButton" customModule="otpValidationScreen" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pyE-HL-4Cv" userLabel="Submit">
                                                 <rect key="frame" x="166.66666666666666" y="254" width="60" height="48"/>
                                                 <color key="backgroundColor" name="AppBlueColor"/>
                                                 <constraints>
@@ -145,6 +145,9 @@
                                                 <state key="normal" title="Login">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="submitOtp:" destination="aIe-fk-WSh" eventType="touchUpInside" id="R6u-s4-n8g"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jlj-7O-w1J">
                                                 <rect key="frame" x="174" y="342" width="45" height="13"/>
@@ -205,6 +208,7 @@
                     <connections>
                         <outlet property="resendBtn" destination="Jlj-7O-w1J" id="uPU-jf-Xek"/>
                         <outlet property="resendReqLbl" destination="HLb-Y9-ETj" id="T4a-DC-6e7"/>
+                        <outlet property="submitOtpBtn" destination="pyE-HL-4Cv" id="bIh-PA-sNo"/>
                         <outletCollection property="otpTextFieldCollection" destination="WUm-xU-9nV" collectionClass="NSMutableArray" id="W3k-la-eFf"/>
                         <outletCollection property="otpTextFieldCollection" destination="yfK-k3-VsK" collectionClass="NSMutableArray" id="Zlh-oO-E7V"/>
                         <outletCollection property="otpTextFieldCollection" destination="JwD-lP-DKg" collectionClass="NSMutableArray" id="TAf-Vc-vni"/>

@@ -11,6 +11,7 @@ class OtpViewController: UIViewController, UITextFieldDelegate, TextFieldDelegat
     
     @IBOutlet var otpTextFieldCollection: [OtpTextField]!
     
+    @IBOutlet weak var submitOtpBtn: UIButton!
     @IBOutlet weak var resendBtn: UIButton!
     @IBOutlet weak var resendReqLbl: UILabel!
 
@@ -27,7 +28,7 @@ class OtpViewController: UIViewController, UITextFieldDelegate, TextFieldDelegat
         otpTextFieldCollection.first?.becomeFirstResponder()
         resendBtn.setTitleColor(.gray, for: .disabled)
         resendReqLbl.text = "\(otpAttempts) resend requests left"
-
+        submitOtpBtn.setState(false)
     }
     
     @IBAction func emailTextFieldEditChange(_ sender: UITextField) {
@@ -37,6 +38,12 @@ class OtpViewController: UIViewController, UITextFieldDelegate, TextFieldDelegat
                     otpTextFieldCollection[index+1].becomeFirstResponder()
                 }
             }
+        }
+        if validateOtp() == true {
+            submitOtpBtn.setState(true)
+            submitOtp(submitOtpBtn)
+        } else {
+            submitOtpBtn.setState(false)
         }
     }
     
@@ -78,6 +85,33 @@ class OtpViewController: UIViewController, UITextFieldDelegate, TextFieldDelegat
         } else {
             let message = "The maximum number of unsuccessful sign in attempts has been reached. Please try again later"
             let alert = UIAlertController(title: "Unable to Sign In", message: message, preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }
+    }
+    
+    func validateOtp() -> Bool {
+        var validate = true
+        otpTextFieldCollection.forEach { field in
+            if field.text == "" || field.text == nil {
+                validate = false
+                return
+            } else if Int(field.text!) == nil {
+                validate = false
+                return
+            }
+        }
+        return validate
+    }
+    
+    @IBAction func submitOtp(_ sender: UIButton) {
+        var otpString = ""
+        otpTextFieldCollection.forEach { field in
+            otpString.append(field.text ?? "")
+        }
+        if let otp = Int(otpString) {
+            let message = "\(otp) Submitted"
+            let alert = UIAlertController(title: "", message: message, preferredStyle: UIAlertController.Style.alert)
             alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
             self.present(alert, animated: true, completion: nil)
         }
